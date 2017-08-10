@@ -28,19 +28,14 @@ import java.awt.GraphicsEnvironment;
 import javax.swing.JFileChooser;
 
 import se.payerl.vlcjwind.VlcjWind;
-import uk.co.caprica.vlcj.player.MediaPlayerFactory;
 import se.payerl.vlcjwind.VlcDetectionListener;
 
 public class Start implements VlcDetectionListener {
-	
-	public static void main(String[] args) {
-		new Start();
-	}
-	
 	public Start() {
 		int width = 0;
 		int height = 0;
-		int tmpW, tmpH;
+		int tmpW;
+		int tmpH;
 		for(GraphicsDevice gd: GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()) {
 			if(gd.getType() == GraphicsDevice.TYPE_RASTER_SCREEN) {
 				tmpH = gd.getDisplayMode().getHeight();
@@ -60,6 +55,10 @@ public class Start implements VlcDetectionListener {
 		}
 	}
 	
+	public static void main(String[] args) {
+		new Start();
+	}
+	
 	public String getVideoFilePath() {
 		JFileChooser chooser = new JFileChooser();
 		chooser.setCurrentDirectory(null);
@@ -73,6 +72,7 @@ public class Start implements VlcDetectionListener {
 	    }
 	}
 
+	@Override
 	public String getVlcPath() {
 		JFileChooser chooser = new JFileChooser();
 		chooser.setCurrentDirectory(null);

@@ -66,24 +66,28 @@ public class MyFrame extends JFrame {
 		});
 		JMenuItem addMP = new JMenuItem("Add new surface");
 		addMP.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				new MyFrame(vlcjwind);
 			}
 		});
 		JMenuItem play = new JMenuItem("Play");
 		play.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				vlcjwind.getMediaPlayer().play();
 			}
 		});
 		JMenuItem pause = new JMenuItem("Pause");		
 		pause.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				vlcjwind.getMediaPlayer().pause();
 			}
 		});
 		JMenuItem stop = new JMenuItem("Stop");
 		stop.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				vlcjwind.getMediaPlayer().stop();
 			}
