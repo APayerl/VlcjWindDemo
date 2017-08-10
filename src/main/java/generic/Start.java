@@ -28,6 +28,7 @@ import java.awt.GraphicsEnvironment;
 import javax.swing.JFileChooser;
 
 import se.payerl.vlcjwind.VlcjWind;
+import uk.co.caprica.vlcj.player.MediaPlayerFactory;
 import se.payerl.vlcjwind.VlcDetectionListener;
 
 public class Start implements VlcDetectionListener {
@@ -50,10 +51,26 @@ public class Start implements VlcDetectionListener {
 				}
 			}
 		}
-		
-		VlcjWind vw = new VlcjWind(width, height, this);
-		vw.getMediaPlayer().prepareMedia("Z:\\Serier\\Downton Abbey\\Season 1\\Downton Abbey - S01E01 (1080p x265 Joy).mkv");
-		gui.MyFrame myFrame = new gui.MyFrame(vw);
+
+		VlcjWind vw = new VlcjWind(this);
+		//vw.getMediaPlayer().prepareMedia("Z:\\Serier\\Boy Meets World\\Season 1\\Boy Meets World - 101 - Pilot.avi");
+		vw.getMediaPlayer().prepareMedia(getVideoFilePath());
+		for(int i = 0; i < 5; i++) {
+			new gui.MyFrame(vw);
+		}
+	}
+	
+	public String getVideoFilePath() {
+		JFileChooser chooser = new JFileChooser();
+		chooser.setCurrentDirectory(null);
+	    chooser.setDialogTitle("Select video file");
+	    chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+	    chooser.setAcceptAllFileFilterUsed(false);
+	    if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) { 
+	    	return chooser.getSelectedFile().toString();
+	    } else {
+	    	return null;
+	    }
 	}
 
 	public String getVlcPath() {

@@ -6,5 +6,24 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.APayerl:VlcjWind:0.2'
+    //compile 'com.github.APayerl:VlcjWind:0.2'
+    //compile 'com.github.APayerl:VlcjWind:bb6ebdfed5'
+    //compile 'com.github.APayerl:VlcjWind:6c89682027'
+    //compile 'com.github.APayerl:VlcjWind:de5b1ddb49'
+    //compile 'com.github.APayerl:VlcjWind:5544e89687'
+    //compile 'com.github.APayerl:VlcjWind:ee6a25b44e'
+    //compile 'com.github.APayerl:VlcjWind:a056ca114d'
+    //compile 'com.github.APayerl:VlcjWind:35772d3181'
+    //compile 'com.github.APayerl:VlcjWind:80d8451ec8'
+    //compile 'com.github.APayerl:VlcjWind:cf062f72e3'
+    //compile 'com.github.APayerl:VlcjWind:918a1eda8c'
+    //compile 'com.github.APayerl:VlcjWind:fd5dc5d55a'
+    //compile 'com.github.APayerl:VlcjWind:41a5aec92d'
+    //compile 'com.github.APayerl:VlcjWind:423fadb0d9'
+    //compile 'com.github.APayerl:VlcjWind:5d6fe8a7b0'
+    //compile 'com.github.APayerl:VlcjWind:777b76b17f'
+    //compile 'com.github.APayerl:VlcjWind:7bdd28e164'
+    //compile 'com.github.APayerl:VlcjWind:c2356ecb1f'
+    //compile 'com.github.APayerl:VlcjWind:982b4774c4'
+    compile 'com.github.APayerl:VlcjWind:a18a0f6139'
 }
